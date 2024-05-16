@@ -16,15 +16,7 @@ pub fn isArmstrongNumber(num: u128) bool {
         const n = std.fmt.parseInt(u32, &[1]u8{c}, 10) catch return false;
 
         sum += std.math.pow(u128, n, power);
-
-        // std.debug.print("\n{d}^{d} = {d}\n", .{ n, power, std.math.pow(u32, n, power) });
     }
-
-    // std.debug.print("\n\tresult: {}, num: {}, sum: {}\n", .{ sum == num, num, sum });
 
     return sum == num;
 }
-
-// pub fn main() !void {
-//     _ = isArmstrongNumber(186_709_961_001_538_790_100_634_132_976_990);
-// }
